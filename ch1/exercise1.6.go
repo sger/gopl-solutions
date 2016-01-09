@@ -11,10 +11,10 @@ import (
 )
 
 //Change color palette green on black
-var palette = []color.Color{color.RGBA{16, 163, 26, 1}, color.RGBA{0, 0, 0, 1}}
+var palette = []color.Color{color.RGBA{16, 163, 26, 1}, color.RGBA{0, 0, 0, 1}, color.RGBA{210, 93, 16, 1}}
 
 const (
-	greenIndex = 0
+	whiteIndex = 0
 	blackIndex = 1
 )
 
@@ -37,7 +37,7 @@ func lissajous(out io.Writer) {
 		for t := 0.0; t < cycles*2*math.Pi; t+=res {
 			x := math.Sin(t)
 			y := math.Sin(t*freq+phase)
-			img.SetColorIndex(size+int(x*size+0.5), size+int(y*size+0.5), blackIndex)
+			img.SetColorIndex(size+int(x*size+0.5), size+int(y*size+0.5), 2)
 			
 		}
 		phase += 0.1

@@ -6,6 +6,8 @@ import (
 	"os"
 )
 
+// Dup2
+
 func main() {
 	counts := make(map[string]int)
 	files := os.Args[1:]

@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-// Dup2
+// Modify Dup2 to print the names of all files in which each duplicated line occurs.
 
 func main() {
 	counts := make(map[string]int)
